@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="NetworkLogging_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YH7-R5-q3j">
+                                <rect key="frame" x="169.5" y="238" width="36" height="30"/>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="tappedSend" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7OX-qF-A7K"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixE-zz-S3M">
+                                <rect key="frame" x="171.5" y="382" width="32" height="30"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="tappedStop" destination="vXZ-lx-hvc" eventType="touchUpInside" id="D9Z-XZ-qV2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2M-cW-7QR">
+                                <rect key="frame" x="148.5" y="449" width="78" height="30"/>
+                                <state key="normal" title="Total traffic"/>
+                                <connections>
+                                    <action selector="tappetAllTraffic" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jU6-mZ-aiB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Znc-O6-l3X">
+                                <rect key="frame" x="170.5" y="142" width="34" height="30"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="tappedStart" destination="vXZ-lx-hvc" eventType="touchUpInside" id="o6s-k9-edA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YH7-R5-q3j" firstAttribute="top" secondItem="Znc-O6-l3X" secondAttribute="bottom" constant="66" id="2NU-g0-8YG"/>
+                            <constraint firstItem="E2M-cW-7QR" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="JTN-iW-guD"/>
+                            <constraint firstItem="Znc-O6-l3X" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="142" id="PEn-Kl-Jvy"/>
+                            <constraint firstItem="ixE-zz-S3M" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="S3n-5X-AyH"/>
+                            <constraint firstItem="ixE-zz-S3M" firstAttribute="top" secondItem="YH7-R5-q3j" secondAttribute="bottom" constant="114" id="TzU-RZ-NxO"/>
+                            <constraint firstItem="Znc-O6-l3X" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="bZY-HG-ij6"/>
+                            <constraint firstItem="E2M-cW-7QR" firstAttribute="top" secondItem="ixE-zz-S3M" secondAttribute="bottom" constant="37" id="ww1-Jy-nxC"/>
+                            <constraint firstItem="YH7-R5-q3j" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="zof-Oo-CDc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="allTraffic" destination="E2M-cW-7QR" id="8U4-Y7-drd"/>
+                        <outlet property="sendButton" destination="YH7-R5-q3j" id="hRo-1v-7Rl"/>
+                        <outlet property="startButton" destination="Znc-O6-l3X" id="8XZ-YF-FpP"/>
+                        <outlet property="stopButton" destination="ixE-zz-S3M" id="gFD-Fp-eOb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="134"/>
+        </scene>
+    </scenes>
+</document>
